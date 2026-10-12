@@ -1,5 +1,6 @@
 import { test as setup } from "@playwright/test";
-import { existsSync } from "node:fs";
+import { existsSync, mkdirSync } from "node:fs";
+import { dirname } from "node:path";
 
 const authFile = "playwright/.auth/admin.json";
 
@@ -15,10 +16,12 @@ setup("Login as Admin with Google", async ({ page }) => {
 
   console.log("Waiting for Google Login...");
 
-  await page.waitForURL("**/admin", {
+  await page.getByRole("link", { name: "Admin Panel" }).waitFor({
+    state: "visible",
     timeout: 120000,
   });
 
+  mkdirSync(dirname(authFile), { recursive: true });
   await page.context().storageState({
     path: authFile,
   });

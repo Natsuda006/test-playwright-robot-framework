@@ -7,7 +7,7 @@ test.describe("Admin Dashboard - US-15", () => {
     });
 
     // ใช้ Google Login Session ที่บันทึกไว้
-    await page.goto("/admin");
+    await page.goto("/admin", { waitUntil: "domcontentloaded" });
 
     // รอให้หน้า Admin โหลดสำเร็จ
     await expect(
@@ -16,7 +16,6 @@ test.describe("Admin Dashboard - US-15", () => {
       }),
     ).toBeVisible();
 
-    await page.waitForTimeout(2000);
   });
 
   // TC-ADM-001
@@ -59,7 +58,6 @@ test.describe("Admin Dashboard - US-15", () => {
 
     // ตรวจสอบ Average Response Time
     await expect(page.getByText("เวลาตอบสนองเฉลี่ย")).toBeVisible();
-    await page.waitForTimeout(2000);
   });
   // TC-ADM-002
   test("TC-ADM-002: แสดงกราฟและข้อมูลสถิติย้อนหลัง 7 วัน", async ({ page }) => {
