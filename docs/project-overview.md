@@ -7,7 +7,7 @@
 ### ข้อมูลเอกสาร (Document Metadata)
 - **หมายเลขเวอร์ชันเอกสาร (Document Version):** `1.0.0`
 - **รอบการทำงานและความคืบหน้า (Progress Period):** สิงหาคม - กันยายน 2569 (August - September 2026)
-- **ผู้จัดทำ (Author):** นางสาวณัฐสุดา ร่องทอง (รหัสนักศึกษา: 664259006, Target User: `nan006`)
+- **ผู้จัดทำ (Author):** นางสาวณัฐ์สุดา รงทอง (รหัสนักศึกษา: 664259006, Target User: `nan006`)
 - **ส่วนงานที่รับผิดชอบ:** ผู้ดูแลระบบ (Admin Subsystem) - US-15 & US-16
 - **ไฟล์เอกสารฉบับทางการ:** [`SPRS-Project-Document.pdf`](../SPRS-Project-Document.pdf)
 
