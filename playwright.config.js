@@ -3,7 +3,7 @@ import { defineConfig } from "@playwright/test";
 export default defineConfig({
   testDir: "./tests",
 
-  timeout: 30 * 1000,
+  timeout: 60 * 1000,
 
   fullyParallel: false,
 
@@ -15,9 +15,13 @@ export default defineConfig({
 
     headless: false,
 
+    launchOptions: {
+      slowMo: 1000,
+    },
+
     video: "on",
 
-    screenshot: "only-on-failure",
+    screenshot: "on",
 
     trace: "retain-on-failure",
   },

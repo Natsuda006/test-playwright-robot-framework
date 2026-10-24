@@ -1,5 +1,11 @@
 .env
+.venv/
 playwright/.auth/
 test-results/
 playwright-report/
+robot-results/
 node_modules/
+log.html
+output.xml
+report.html
+playwright-log.txt
